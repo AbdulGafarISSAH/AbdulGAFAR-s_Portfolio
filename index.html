@@ -6,11 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Abdul GAFAR</title>
+  <script src="./scripts/index.js" defer> </script>
 </head>
 
 <body>
-  <section class="bg-gray-900 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6">
+  <nav id="navbar" class="flex justify-between items-center w-full text-white h-20 px-4 md:px-8 text-2xl font-semibold bg-transparent flex-row justify-around fixed inset-x-0">
+    <div className="flex items-center">
+      AbdulGafar
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <a href="#about" className="text-white hover:text-gray-300">About</a>
+      <a href="#skills" className="text-white hover:text-gray-300">Skills</a>
+      <a href="#projects" className="text-white hover:text-gray-300">Projects</a>
+    </div>
+  </nav>
+  <section class="bg-gray-800 text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 pt-8">
       <h2 class="text-3xl font-semibold mb-8">About</h2>
 
       <div class="flex items-center mb-8">
@@ -20,7 +32,9 @@
           <p class="text-gray-400">I build accessible, pixel-perfect digital experiences for the web.</p>
           <a class="hover:underline" href="mailto:issahagafarustif@gmail.com">📧issahgafarustif@gmail.com</a>
           <p>📞+233546283504</p>
-          <a href="./cv/AbdulGAFAR_CV_WebDeveloper.pdf" download="AbdulGAFAR__CV.pdf"><button class="bg-gray-800 hover:bg-gray-400 text-white font-semibold mt-1 py-1 px-3 rounded-sm shadow-md transform transition duration-300 ease-in-out hover:scale-105">Download My CV</button></a>
+          <a href="./cv/AbdulGAFAR_CV_WebDeveloper.pdf" download="AbdulGAFAR__CV.pdf"><button
+              class="bg-gray-900 hover:bg-gray-400 text-white font-semibold mt-1 py-1 px-3 rounded-sm shadow-md transform transition duration-300 ease-in-out hover:scale-105">Download
+              My CV</button></a>
         </div>
       </div>
 
@@ -32,7 +46,9 @@
 
       <p class="text-lg text-gray-300">
         Currently, I'm a trainee Web Development Engineer at <a href="https://meltwater.org/"
-          class="text-blue-400 hover:underline">MEST Africa</a>, refining skills through real-world projects at MEST Africa. Eager to join dynamic development teams to contribute clean code, innovative ideas, and a commitment to continuous learning.
+          class="text-blue-400 hover:underline">MEST Africa</a>, refining skills through real-world projects at MEST
+        Africa. Eager to join dynamic development teams to contribute clean code, innovative ideas, and a commitment to
+        continuous learning.
       </p>
     </div>
   </section>
@@ -40,28 +56,28 @@
 
 
 
-  <section class="bg-gray-900 text-white py-16">
+  <section class="bg-gray-800 text-white py-16">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-semibold mb-8">Experience</h2>
 
       <div class="space-y-12">
         <!-- Job Entry -->
         <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 md:mb-0">
+          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
             <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
             <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2v20M2 12h20"></path>
             </svg>
           </div>
-          <div class="ml-6">
+          <div class="ml-6 mb-4">
             <h3 class="text-xl font-semibold">Trainee Web Development Engineer</h3>
             <p class="text-gray-400">MEST Africa & Generation Ghana </p>
             <p class="text-sm text-gray-500">May 2025 — Present</p>
             <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Built and maintained critical components used across Generation Gh’s frontend.</li>
+              <li>Built and maintained critical components used across various frontends.</li>
               <li>Collaborated with cross-functional teams to implement best practices in web accessibility.</li>
-              <li>Technologies: HTML, JavaScript, CSS, MySQL.</li>
+              <li>Technologies: HTML, JavaScript, CSS, React.js</li>
             </ul>
           </div>
         </div>
@@ -71,14 +87,85 @@
       <div class="space-y-12">
         <!-- Job Entry -->
         <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-4 md:mb-0">
+          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
             <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
             <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2v20M2 12h20"></path>
             </svg>
           </div>
-          <div class="ml-6">
+          <div class="ml-6 mb-4">
+            <h3 class="text-xl font-semibold">AI Data Annotator (Contractor)</h3>
+            <p class="text-gray-400">LXT AI – Remote</p>
+            <p class="text-sm text-gray-500">Jan 2025 – Mar 2025</p>
+            <ul class="mt-2 space-y-1 text-gray-400">
+              <li>Tagged and structured text data for AI training datasets.</li>
+              <li>Maintained high accuracy through strict QA protocols.</li>
+              <li>Improved speed, focus, and structured data awareness.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Repeat similar blocks for other experiences -->
+      </div>
+      <div class="space-y-12">
+        <!-- Job Entry -->
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
+            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"></path>
+            </svg>
+          </div>
+          <div class="ml-6 mb-4">
+            <h3 class="text-xl font-semibold">Software Tester (Remote Contractor)</h3>
+            <p class="text-gray-400">U-Test / Tester.io</p>
+            <p class="text-sm text-gray-500">Feb 2025 – Present</p>
+            <ul class="mt-2 space-y-1 text-gray-400">
+              <li>Conducted UI and functionality testing for web applications.</li>
+              <li>Reported bugs clearly, improving user experience and design reliability.</li>
+              <li>Developed a sharp eye for layout and cross-browser consistency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Repeat similar blocks for other experiences -->
+      </div>
+      <div class="space-y-12">
+        <!-- Job Entry -->
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
+            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"></path>
+            </svg>
+          </div>
+          <div class="ml-6 mb-4">
+            <h3 class="text-xl font-semibold">Electrical Engineer Associate</h3>
+            <p class="text-gray-400">Illuminate Africa Consult – Accra</p>
+            <p class="text-sm text-gray-500">Jun 2024 – May 2025</p>
+            <ul class="mt-2 space-y-1 text-gray-400">
+              <li>Supported energy audits and automation setups.</li>
+              <li>Strengthened logical thinking and analytical skills transferable to debugging.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Repeat similar blocks for other experiences -->
+      </div>
+      <div class="space-y-12">
+        <!-- Job Entry -->
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
+            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M2 12h20"></path>
+            </svg>
+          </div>
+          <div class="ml-6 mb-4">
             <h3 class="text-xl font-semibold">Trainee Web Development Engineer</h3>
             <p class="text-gray-400">Generation GH</p>
             <p class="text-sm text-gray-500">2024 — Present</p>
@@ -100,15 +187,15 @@
 
 
   <!-- projects -->
-  <section class="bg-gray-900 text-white py-16">
+  <section class="bg-gray-800 text-white py-16">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-semibold mb-8">Projects</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img src="./images/funfood.png" alt="Funfood" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold"> Funfood Project </h3>
+            <h3 class="text-xl font-semibold"> Foodfun Project </h3>
             <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
             <div class="mt-4">
               <span
@@ -127,7 +214,7 @@
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img src="./images/skyno.png" alt="Skynomads" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold"> Skynomads Project </h3>
@@ -149,7 +236,7 @@
           </div>
         </div>
 
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img src="./images/portc.png" alt="Colorlib Inspo" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Colorlib Portfolio Inspo</h3>
@@ -170,7 +257,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img src="./images/cond.png" alt="Conditional Statement" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Conditional Statement Project </h3>
@@ -191,7 +278,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
           <img src="./images/auth.png" alt="Profile Authentication" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-semibold">Profile Authentication Project </h3>
