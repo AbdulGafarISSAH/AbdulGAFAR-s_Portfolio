@@ -1,85 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" class="scroll-smooth scroll-pt-10">
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Abdul GAFAR</title>
-  <script src="./scripts/index.js" defer> </script>
+  <title>Abdul GAFAR - Web Developer Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-display {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Basic animation for hero text */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+      animation: fadeIn 1s ease-out 0.3s forwards;
+      opacity: 0;
+      /* Start invisible */
+    }
+
+    .animate-fade-in-delay-2 {
+      animation: fadeIn 1s ease-out 0.6s forwards;
+      opacity: 0;
+      /* Start invisible */
+    }
+  </style>
+  <script src="./scripts/index.js" defer></script>
 </head>
 
-<body>
+<body class="bg-gray-900">
   <nav id="navbar"
-    class="flex justify-between items-center w-full text-white h-20 px-4 md:px-8 text-2xl font-semibold bg-transparent flex-row justify-around fixed inset-x-0">
-    <div className="flex items-center">
-      AbdulGafar
+    class="flex justify-between items-center w-full text-white h-20 px-4 md:px-8 text-xl font-semibold bg-transparent fixed inset-x-0 top-0 z-50 transition-colors duration-300 ease-in-out">
+    <div class="flex items-center text-3xl font-display text-emerald-400">
+      <a href="#home">AbdulGafar</a>
     </div>
 
-    <div class="flex items-center space-x-4">
-      <a href="#about" class="text-white hover:text-gray-300">About</a>
-      <a href="#skills" class="text-white hover:text-gray-300">Skills</a>
-      <a href="#projects" class="text-white hover:text-gray-300">Projects</a>
+    <button id="menu-button" class="md:hidden text-white focus:outline-none z-[60]">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#about" class="text-white hover:text-emerald-400 transition-colors duration-200">About</a>
+      <a href="#skills" class="text-white hover:text-emerald-400 transition-colors duration-200">Skills</a>
+      <a href="#experience" class="text-white hover:text-emerald-400 transition-colors duration-200">Experience</a>
+      <a href="#projects" class="text-white hover:text-emerald-400 transition-colors duration-200">Projects</a>
+    </div>
+
+    <div id="mobile-menu"
+      class="fixed inset-y-0 right-0 w-64 bg-gray-800 z-[55] transform translate-x-full
+            transition-transform duration-300 ease-in-out md:hidden
+            flex flex-col items-center pt-20 space-y-6">
+      <button id="close-menu-button" class="absolute top-4 right-4 text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#about" class="text-white hover:text-emerald-400 transition-colors duration-200 text-2xl">About</a>
+      <a href="#skills" class="text-white hover:text-emerald-400 transition-colors duration-200 text-2xl">Skills</a>
+      <a href="#experience" class="text-white hover:text-emerald-400 transition-colors duration-200 text-2xl">Experience</a>
+      <a href="#projects" class="text-white hover:text-emerald-400 transition-colors duration-200 text-2xl">Projects</a>
     </div>
   </nav>
-  <section id="about" class=" bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6 pt-8">
-      <h2 class="text-3xl font-semibold mb-8">About</h2>
 
-      <div class="flex items-center mb-8">
-        <img src="./images/i.jpg" alt="Abdul GAFAR" class="w-32 h-32 rounded-full mr-6">
+  <section id="home"
+    class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-blue-950 text-white overflow-hidden p-4 md:p-8">
+    <div class="z-10 text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-fade-in font-display">
+        Hi, I'm <span class="text-emerald-400">Abdul GAFAR</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 animate-fade-in-delay-1">
+        I build accessible, pixel-perfect digital experiences for the web.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-delay-2">
+        <a href="#projects"
+          class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+          View My Work
+        </a>
+        <a href="./cv/AbdulGAFAR_WebDeveloper_CV.pdf" download="AbdulGAFAR_WebDeveloper_CV.pdf"
+          class="inline-block border-2 border-white hover:border-emerald-400 text-white font-semibold py-3 px-8 rounded-lg transform transition duration-300 ease-in-out hover:scale-105 hover:text-emerald-400">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-display font-semibold mb-8 text-center text-emerald-400">About Me</h2>
+
+      <div class="flex flex-col md:flex-row items-center md:items-start mb-8 bg-gray-800 p-6 rounded-lg shadow-xl">
+        <img src="./images/i.jpg" alt="Abdul GAFAR"
+          class="w-32 h-32 rounded-full mr-0 md:mr-8 mb-6 md:mb-0 border-4 border-emerald-500 shadow-md">
         <div>
-          <h3 class="text-xl font-semibold">Hi, I'm Abdul GAFAR</h3>
-          <p class="text-gray-400">I build accessible, pixel-perfect digital experiences for the web.</p>
-          <a class="hover:underline" href="mailto:issahagafarustif@gmail.com">📧issahgafarustif@gmail.com</a>
-          <p>📞+233546283504</p>
-          <a href="./cv/Issah Abdul Gafar.docx.pdf" download="AbdulGAFAR_WebDeveloper_CV.pdf"><button
-              class="bg-gray-900 hover:bg-gray-400 text-white font-semibold mt-1 py-1 px-3 rounded-sm shadow-md transform transition duration-300 ease-in-out hover:scale-105">Download My CV</button></a>
+          <h3 class="text-3xl font-display font-semibold mb-2">Abdul GAFAR, Web Developer</h3>
+          <p class="text-gray-300 text-lg mb-4">It's great to connect! My passion lies in crafting accessible,
+            pixel-perfect digital experiences for the web.</p>
+          <div class="flex flex-col space-y-2 text-lg">
+            <a class="hover:underline text-gray-300 hover:text-emerald-400 transition-colors duration-200 flex items-center"
+              href="mailto:issahagafarustif@gmail.com">
+              <svg class="w-6 h-6 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H8a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V18a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              issahgafarustif@gmail.com
+            </a>
+            <p class="text-gray-300 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.12.35.03.75-.25 1.02L6.62 10.79z" />
+              </svg>
+              +233546283504
+            </p>
+            <a href="./cv/AbdulGAFAR_WebDeveloper_CV.pdf" download="AbdulGAFAR_WebDeveloper_CV.pdf">
+              <button
+                class="mt-4 inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-md shadow-md transform transition duration-300 ease-in-out hover:scale-105">
+                Download My CV
+              </button>
+            </a>
+          </div>
         </div>
       </div>
 
-      <p class="text-lg text-gray-300 mb-6">
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">
         I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design
         with robust engineering. My favorite work lies at the intersection of design and development, creating
         experiences that not only look great but are meticulously built for performance and usability.
       </p>
 
-      <p class="text-lg text-gray-300">
-        Currently, I'm a trainee Web Development Engineer at <a href="https://meltwater.org/"
-          class="text-blue-400 hover:underline">MEST Africa</a>, refining skills through real-world projects at MEST
-        Africa. Eager to join dynamic development teams to contribute clean code, innovative ideas, and a commitment to
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Currently, I'm a Web Development Engineer at <a href="https://meltwater.org/"
+          class="text-emerald-400 hover:underline transition-colors duration-200">MEST Africa</a>, refining skills
+        through real-world projects. Eager to join dynamic development teams to contribute clean code, innovative ideas,
+        and a commitment to
         continuous learning.
       </p>
     </div>
   </section>
 
   <section id="skills" class="bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold mb-8">Skills</h2>
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-display font-semibold mb-12 text-center text-emerald-400">My Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div
+          class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+          <h3 class="text-2xl font-display font-semibold mb-6 text-emerald-300 text-center">Languages & Frameworks</h3>
+          <div class="grid grid-cols-2 gap-4 text-lg">
+            <div class="flex items-center"><i class="fa-brands fa-html5 fa-fw mr-3 text-[#E44D26]"></i> HTML5</div>
+            <div class="flex items-center"><i class="fa-brands fa-css3-alt fa-fw mr-3 text-[#1572B6]"></i> CSS3</div>
+            <div class="flex items-center"><i class="fa-brands fa-square-js fa-fw mr-3 text-[#F7DF1E]"></i> JavaScript
+            </div>
+            <div class="flex items-center"><i class="fa-brands fa-react fa-fw mr-3 text-[#61DAFB]"></i> React.js</div>
+            <div class="flex items-center"><i class="fa-brands fa-python fa-fw mr-3 text-[#3776AB]"></i> Python</div>
+            <div class="flex items-center"><i class="fa-solid fa-wind fa-fw mr-3 text-[#06B6D4]"></i> Tailwind CSS</div>
+            <div class="flex items-center"><i class="fa-solid fa-calculator fa-fw mr-3 text-[#A9192C]"></i> MATLAB</div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+          <h3 class="text-2xl font-display font-semibold mb-6 text-emerald-300 text-center">Web Development Skills</h3>
+          <div class="grid grid-cols-2 gap-4 text-lg">
+            <div class="flex items-center"><i class="fa-solid fa-mobile-screen fa-fw mr-3 text-black"></i> Responsive
+              Design</div>
+            <div class="flex items-center"><i class="fa-solid fa-universal-access fa-fw mr-3 text-blue-600"></i> Web
+              Accessibility</div>
+            <div class="flex items-center"><i class="fa-solid fa-globe fa-fw mr-3 text-blue-400"></i> Cross-Browser
+              Compatibility</div>
+            <div class="flex items-center"><i class="fa-solid fa-bug fa-fw mr-3 text-black"></i> Debugging & Testing UI
+            </div>
+            <div class="flex items-center"><i class="fa-solid fa-cloud-arrow-down fa-fw mr-3 text-white"></i> RESTful
+              API Integration</div>
+            <div class="flex items-center"><i class="fa-solid fa-check-to-slot fa-fw mr-3 text-gray-500"></i>
+              Client-side Form Validation</div>
+            <div class="flex items-center"><i class="fa-solid fa-code-branch fa-fw mr-3 text-[#F05033]"></i> Version
+              Control Workflows</div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+          <h3 class="text-2xl font-display font-semibold mb-6 text-emerald-300 text-center">Tools & Collaboration</h3>
+          <div class="grid grid-cols-2 gap-4 text-lg">
+            <div class="flex items-center"><i class="fa-brands fa-git-alt fa-fw mr-3 text-[#F05033]"></i> Git</div>
+            <div class="flex items-center"><i class="fa-brands fa-github fa-fw mr-3 text-white"></i> GitHub</div>
+            <div class="flex items-center"><i class="fa-solid fa-laptop-code fa-fw mr-3 text-[#007ACC]"></i> VS Code
+            </div>
+            <div class="flex items-center"><i class="fa-brands fa-figma fa-fw mr-3 text-[#A259FF]"></i> Figma</div>
+            <div class="flex items-center"><i class="fa-solid fa-tools fa-fw mr-3 text-[#C0C0C0]"></i> Browser DevTools
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-
-
-  <section class=" bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
+  <section id="experience" class="bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold mb-8">Experience</h2>
+      <h2 class="text-4xl font-display font-semibold mb-12 text-center text-emerald-400">Experience</h2>
 
       <div class="space-y-12">
-        <!-- Job Entry -->
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
-            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-103 transition duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20"></path>
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
             </svg>
           </div>
-          <div class="ml-6 mb-4">
+          <div class="ml-0 md:ml-6 flex-grow">
             <h3 class="text-xl font-semibold">Web Development Engineer</h3>
             <p class="text-gray-400">MEST Africa & Generation Ghana </p>
             <p class="text-sm text-gray-500">May 2025 — Present</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
+            <ul class="mt-2 space-y-1 text-gray-300 list-disc list-inside">
               <li>Built and maintained critical components used across various frontends.</li>
               <li>Collaborated with cross-functional teams to implement best practices in web accessibility.</li>
               <li>Technologies: HTML, JavaScript, CSS, React.js</li>
@@ -87,23 +253,24 @@
           </div>
         </div>
 
-        <!-- Repeat similar blocks for other experiences -->
-      </div>
-      <div class="space-y-12">
-        <!-- Job Entry -->
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
-            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-103 transition duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20"></path>
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
             </svg>
           </div>
-          <div class="ml-6 mb-4">
+          <div class="ml-0 md:ml-6 flex-grow">
             <h3 class="text-xl font-semibold">AI Data Annotator (Contractor)</h3>
             <p class="text-gray-400">LXT AI – Remote</p>
             <p class="text-sm text-gray-500">Jan 2025 – Mar 2025</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
+            <ul class="mt-2 space-y-1 text-gray-300 list-disc list-inside">
               <li>Tagged and structured text data for AI training datasets.</li>
               <li>Maintained high accuracy through strict QA protocols.</li>
               <li>Improved speed, focus, and structured data awareness.</li>
@@ -111,23 +278,22 @@
           </div>
         </div>
 
-        <!-- Repeat similar blocks for other experiences -->
-      </div>
-      <div class="space-y-12">
-        <!-- Job Entry -->
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
-            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-103 transition duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20"></path>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
           </div>
-          <div class="ml-6 mb-4">
+          <div class="ml-0 md:ml-6 flex-grow">
             <h3 class="text-xl font-semibold">Software Tester (Remote Contractor)</h3>
             <p class="text-gray-400">U-Test / Tester.io</p>
             <p class="text-sm text-gray-500">Feb 2025 – Present</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
+            <ul class="mt-2 space-y-1 text-gray-300 list-disc list-inside">
               <li>Conducted UI and functionality testing for web applications.</li>
               <li>Reported bugs clearly, improving user experience and design reliability.</li>
               <li>Developed a sharp eye for layout and cross-browser consistency.</li>
@@ -135,182 +301,226 @@
           </div>
         </div>
 
-        <!-- Repeat similar blocks for other experiences -->
-      </div>
-      <div class="space-y-12">
-        <!-- Job Entry -->
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
-            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-103 transition duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20"></path>
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
             </svg>
           </div>
-          <div class="ml-6 mb-4">
+          <div class="ml-0 md:ml-6 flex-grow">
             <h3 class="text-xl font-semibold">Electrical Engineer Associate</h3>
             <p class="text-gray-400">Illuminate Africa Consult – Accra</p>
             <p class="text-sm text-gray-500">Jun 2024 – May 2025</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
+            <ul class="mt-2 space-y-1 text-gray-300 list-disc list-inside">
               <li>Supported energy audits and automation setups.</li>
               <li>Strengthened logical thinking and analytical skills transferable to debugging.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Repeat similar blocks for other experiences -->
-      </div>
-      <div class="space-y-12">
-        <!-- Job Entry -->
-        <div class="flex flex-col md:flex-row items-start md:items-center">
-          <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 md:mb-0">
-            <!-- The <svg> tag in HTML is used to define scalable vector graphics -->
-            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+        <div
+          class="flex flex-col md:flex-row items-start md:items-center bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-103 transition duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mb-4 md:mb-0">
+            <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0-.33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+              </path>
             </svg>
           </div>
-          <div class="ml-6 mb-4">
-            <h3 class="text-xl font-semibold">Trainee Web Development Engineer</h3>
-            <p class="text-gray-400">Generation GH</p>
-            <p class="text-sm text-gray-500">2024 — Present</p>
-            <ul class="mt-2 space-y-1 text-gray-400">
-              <li>Built and maintained critical components used across Generation Gh’s frontend.</li>
-              <li>Collaborated with cross-functional teams to implement best practices in web accessibility.</li>
-              <li>Technologies: HTML, JavaScript, CSS, MySQL.</li>
+          <div class="ml-0 md:ml-6 flex-grow">
+            <h3 class="text-xl font-semibold">Plant Engineer</h3>
+            <p class="text-gray-400">Ghana Specialty Fats Industries Ltd.[WILMAR]-Tema, Ghana</p>
+            <p class="text-sm text-gray-500">Dec 2022 - Nov 2023</p>
+            <ul class="mt-2 space-y-1 text-gray-300 list-disc list-inside">
+              <li>Engaged in root-cause analysis and problem-solving for operational inefficiencies, directly
+                transferable to debugging and optimizing codebases.</li>
+              <li> Performed comprehensive routine plant checks and preventative maintenance, cultivating a sharp eye
+                for detail and proactive system integrity.</li>
+              <li>Championed and strictly adhered to industrial health, safety, and quality management protocols,
+                reinforcing a commitment to robust standards and error prevention.</li>
+              <li>Consistently achieved production targets, demonstrating a focus on efficiency and delivery in a
+                demanding environment.</li>
             </ul>
           </div>
         </div>
-
-        <!-- Repeat similar blocks for other experiences -->
       </div>
     </div>
-
-
   </section>
 
-
-
-  <!-- projects -->
-  <section id="projects" class=" bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
+  <section id="projects" class="bg-gradient-to-r from-gray-900 to-blue-950 text-white py-16">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold mb-8">Projects</h2>
+      <h2 class="text-4xl font-display font-semibold mb-12 text-center text-emerald-400">My Projects</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-          <img src="./images/funfood.png" alt="Funfood" class="w-full h-48 object-cover">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div
+          class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-103 hover:shadow-2xl transition duration-300 ease-in-out">
+          <img src="./images/funfood.png" alt="Foodfun Project" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold"> Foodfun Project </h3>
-            <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
-            <div class="mt-4">
+            <h3 class="text-xl font-semibold font-display">Foodfun Landing Page</h3>
+            <p class="text-gray-300 mt-2 text-sm">A delightful food ordering platform designed for a seamless user
+              experience. Features include Browse menus, adding items to cart, and a responsive design.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-              <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Tailwind
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+              <span class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind
                 CSS</span>
-              <span class="inline-block bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Styled
-                Components</span>
             </div>
-            <div class="mt-4 flex space-x-4">
+            <div class="mt-6 flex space-x-4">
               <a href="https://abdulgafarissah.github.io/foodfunproject/" target="_blank"
-                class="text-green-400 hover:underline">Live Demo</a>
+                class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                Live Demo
+              </a>
               <a href="https://github.com/AbdulGafarISSAH/foodfunproject.git" target="_blank"
-                class="text-green-400 hover:underline">Source Code</a>
+                class="inline-block border-2 border-emerald-600 hover:border-emerald-700 text-emerald-400 hover:text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 hover:bg-emerald-600">
+                Source Code
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-          <img src="./images/skyno.png" alt="Skynomads" class="w-full h-48 object-cover">
+        <div
+          class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-103 hover:shadow-2xl transition duration-300 ease-in-out">
+          <img src="./images/skyno.png" alt="Skynomads Project" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold"> Skynomads Project </h3>
-            <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
-            <div class="mt-4">
+            <h3 class="text-xl font-semibold font-display">Skynomads Landing Page</h3>
+            <p class="text-gray-300 mt-2 text-sm">A modern and visually appealing landing page for a fictional aircraft maintenace organization (MRO), showcasing services and capturing user interest.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-              <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Tailwind
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+              <span class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind
                 CSS</span>
-              <span class="inline-block bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Styled
-                Components</span>
             </div>
-            <div class="mt-4 flex space-x-4">
+            <div class="mt-6 flex space-x-4">
               <a href="https://abdulgafarissah.github.io/LANDING-PAGE-ASSIGNMENT/" target="_blank"
-                class="text-green-400 hover:underline">Live Demo</a>
+                class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                Live Demo
+              </a>
               <a href="https://github.com/AbdulGafarISSAH/LANDING-PAGE-ASSIGNMENT.git" target="_blank"
-                class="text-green-400 hover:underline">Source Code</a>
+                class="inline-block border-2 border-emerald-600 hover:border-emerald-700 text-emerald-400 hover:text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 hover:bg-emerald-600">
+                Source Code
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-          <img src="./images/portc.png" alt="Colorlib Inspo" class="w-full h-48 object-cover">
+        <div
+          class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-103 hover:shadow-2xl transition duration-300 ease-in-out">
+          <img src="./images/portc.png" alt="Colorlib Portfolio Inspo" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold">Colorlib Portfolio Inspo</h3>
-            <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
-            <div class="mt-4">
+            <h3 class="text-xl font-semibold font-display">Colorlib Portfolio Replication</h3>
+            <p class="text-gray-300 mt-2 text-sm">A re-creation of a Colorlib portfolio template, demonstrating advanced
+              CSS layout techniques and attention to detail in design implementation.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-              <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Tailwind
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+              <span class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind
                 CSS</span>
-              <span class="inline-block bg-purple-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Styled
-                Components</span>
+              <span
+                class="inline-block bg-yellow-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
             </div>
-            <div class="mt-4 flex space-x-4">
+            <div class="mt-6 flex space-x-4">
               <a href="https://abdulgafarissah.github.io/portfolio/" target="_blank"
-                class="text-green-400 hover:underline">Live Demo</a>
-              <a href="https://github.com/AbdulGafarISSAH/foodfunproject.git" target="_blank"
-                class="text-green-400 hover:underline">Source Code</a>
+                class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                Live Demo
+              </a>
+              <a href="https://github.com/AbdulGafarISSAH/portfolio.git" target="_blank"
+                class="inline-block border-2 border-emerald-600 hover:border-emerald-700 text-emerald-400 hover:text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 hover:bg-emerald-600">
+                Source Code
+              </a>
             </div>
           </div>
         </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-          <img src="./images/cond.png" alt="Conditional Statement" class="w-full h-48 object-cover">
+
+        <div
+          class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-103 hover:shadow-2xl transition duration-300 ease-in-out">
+          <img src="./images/cond.png" alt="Conditional Statement Project" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold">Conditional Statement Project </h3>
-            <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
-            <div class="mt-4">
+            <h3 class="text-xl font-semibold font-display">Conditional Statement Animation</h3>
+            <p class="text-gray-300 mt-2 text-sm">An interactive JavaScript animation project demonstrating the use of conditional statements for dynamic logic and user feedback.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-              <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Tailwind
-                CSS</span>
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
               <span
-                class="inline-block bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded-full">JavaScript</span>
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
+              <span
+                class="inline-block bg-yellow-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript
+              </span>
             </div>
-            <div class="mt-4 flex space-x-4">
+            <div class="mt-6 flex space-x-4">
               <a href="https://tf-conditional-statement.vercel.app/" target="_blank"
-                class="text-green-400 hover:underline">Live Demo</a>
+                class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                Live Demo
+              </a>
               <a href="https://github.com/Gen-ny/TF-conditional-statement.git" target="_blank"
-                class="text-green-400 hover:underline">Source Code</a>
+                class="inline-block border-2 border-emerald-600 hover:border-emerald-700 text-emerald-400 hover:text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 hover:bg-emerald-600">
+                Source Code
+              </a>
             </div>
           </div>
         </div>
-        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+
+        <div
+          class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-103 hover:shadow-2xl transition duration-300 ease-in-out">
           <img src="./images/auth.png" alt="Profile Authentication" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold">Profile Authentication Project </h3>
-            <p class="text-gray-400 mt-2">Brief description of the project highlighting its purpose and features.</p>
-            <div class="mt-4">
+            <h3 class="text-xl font-semibold font-display">Profile Authentication System</h3>
+            <p class="text-gray-300 mt-2 text-sm">A basic user authentication flow (login/signup) demonstrating form
+              handling and client-side validation.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
               <span
-                class="inline-block bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">HTML</span>
-              <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full">Tailwind
+                class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+              <span class="inline-block bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">Tailwind
                 CSS</span>
               <span
-                class="inline-block bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded-full">JavaScript</span>
+                class="inline-block bg-yellow-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
             </div>
-            <div class="mt-4 flex space-x-4">
+            <div class="mt-6 flex space-x-4">
               <a href="https://abdulgafarissah.github.io/Profile-Authentication/" target="_blank"
-                class="text-green-400 hover:underline">Live Demo</a>
+                class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                Live Demo
+              </a>
               <a href="https://github.com/AbdulGafarISSAH/Profile-Authentication.git" target="_blank"
-                class="text-green-400 hover:underline">Source Code</a>
+                class="inline-block border-2 border-emerald-600 hover:border-emerald-700 text-emerald-400 hover:text-white font-semibold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 hover:bg-emerald-600">
+                Source Code
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- Repeat similar blocks for other projects -->
-
       </div>
     </div>
   </section>
 
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="mb-4 text-md">&copy; 2025 Abdul GAFAR. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 text-xl">
+        <a href="https://github.com/AbdulGafarISSAH" target="_blank"
+          class="hover:text-emerald-400 transition-colors duration-300">
+          <svg class="w-7 h-7 inline-block align-middle" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.679-.217.679-.481 0-.237-.008-.865-.013-1.704-2.782.602-3.369-1.34-3.369-1.34-.454-1.157-1.11-1.46-1.11-1.46-.908-.619.069-.605.069-.605 1.002.07 1.527 1.03 1.527 1.03.89 1.529 2.341 1.08 2.91.82.09-.638.35-1.083.636-1.339-2.22-.253-4.555-1.116-4.555-4.949 0-1.096.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.438 9.438 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.025 2.747-1.025.546 1.379.202 2.398.099 2.65.64.7 1.028 1.592 1.028 2.688 0 3.841-2.339 4.69-4.566 4.933.359.309.678.914.678 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.481C21.144 20.197 24 16.442 24 12.017 24 6.484 19.522 2 14 2h-2z"
+              clip-rule="evenodd" />
+          </svg>
+          <span class="ml-2 hidden sm:inline">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/abdul-gafar-issah" target="_blank"
+          class="hover:text-emerald-400 transition-colors duration-300">
+          <svg class="w-7 h-7 inline-block align-middle" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM4 21h4V9H4zM6 7a2 2 0 110-4 2 2 0 010 4z" />
+          </svg>
+          <span class="ml-2 hidden sm:inline">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
